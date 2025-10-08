@@ -25,7 +25,7 @@ form.addEventListener("submit",(e)=>{
 	console.log(title,author,isbn)
 })
 function clearBtn(e) {
-	const currentTr=e.target.parentNode;
+	const currentTr=e.target.parentNode.parentNode;
 	currentTr.remove();
 	console.log(e.target.parentNode)
 }
