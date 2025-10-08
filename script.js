@@ -15,7 +15,8 @@ form.addEventListener("submit",(e)=>{
 	td3.innerText=isbn;
 	const deleteBtn=document.createElement("button");
 	deleteBtn.innerText="X";
-	deleteBtn.addEventListener("click",clearBtn)
+	deleteBtn.addEventListener("click",clearBtn);
+	deleteBtn.classList.add("delete");
 	tr.append(td1,td2,td3,deleteBtn);
 	tbody.appendChild(tr);
 	tbody.style.backgroundColor="#F2F2F2";
