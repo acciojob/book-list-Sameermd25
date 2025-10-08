@@ -13,7 +13,16 @@ form.addEventListener("submit",(e)=>{
 	td2.innerText=author;
 	const td3=document.createElement("td");
 	td3.innerText=isbn;
-	tr.append(td1,td2,td3);
+	const deleteBtn=document.createElement("button");
+	deleteBtn.innerText="X";
+	deleteBtn.addEventListener("click",clearBtn)
+	tr.append(td1,td2,td3,deleteBtn);
 	tbody.appendChild(tr);
+	tbody.style.backgroundColor="#F2F2F2";
 	console.log(title,author,isbn)
 })
+function clearBtn(e) {
+	const currentTr=e.target.parentNode;
+	currentTr.remove();
+	console.log(e.target.parentNode)
+}
