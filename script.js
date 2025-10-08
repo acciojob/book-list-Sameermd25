@@ -13,11 +13,13 @@ form.addEventListener("submit",(e)=>{
 	td2.innerText=author;
 	const td3=document.createElement("td");
 	td3.innerText=isbn;
+	const td4=document.createElement("td");
 	const deleteBtn=document.createElement("button");
 	deleteBtn.innerText="X";
 	deleteBtn.addEventListener("click",clearBtn);
 	deleteBtn.classList.add("delete");
-	tr.append(td1,td2,td3,deleteBtn);
+	td4.appendChild(deleteBtn);
+	tr.append(td1,td2,td3,td4);
 	tbody.appendChild(tr);
 	tbody.style.backgroundColor="#F2F2F2";
 	console.log(title,author,isbn)
